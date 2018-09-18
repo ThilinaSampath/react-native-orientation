@@ -70,7 +70,6 @@ static UIInterfaceOrientationMask _orientation = UIInterfaceOrientationMaskAllBu
           orientationStr = @"UNKNOWN";
           break;
       }
-      break;
   return orientationStr;
 }
 
