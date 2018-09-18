@@ -52,22 +52,6 @@ static UIInterfaceOrientationMask _orientation = UIInterfaceOrientationMaskAllBu
 
 - (NSString *)getOrientationStr: (UIDeviceOrientation)orientation {
   NSString *orientationStr;
-  switch (orientation) {
-    case UIDeviceOrientationPortrait:
-      orientationStr = @"PORTRAIT";
-      break;
-    case UIDeviceOrientationLandscapeLeft:
-    case UIDeviceOrientationLandscapeRight:
-
-      orientationStr = @"LANDSCAPE";
-      break;
-
-    case UIDeviceOrientationPortraitUpsideDown:
-      orientationStr = @"PORTRAITUPSIDEDOWN";
-      break;
-
-    default:
-      // orientation is unknown, we try to get the status bar orientation
       switch ([[UIApplication sharedApplication] statusBarOrientation]) {
         case UIInterfaceOrientationPortrait:
           orientationStr = @"PORTRAIT";
@@ -87,7 +71,6 @@ static UIInterfaceOrientationMask _orientation = UIInterfaceOrientationMaskAllBu
           break;
       }
       break;
-  }
   return orientationStr;
 }
 
